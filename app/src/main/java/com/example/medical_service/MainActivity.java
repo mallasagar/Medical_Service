@@ -37,15 +37,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         toogle.syncState();
 
 
+    //added fragment for initial condition when no fragment is selected
         if (savedInstanceState ==null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new MedecineFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_medecine);
+            }
         }
-
-
-    }
-
+        //added fragment
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem item) {
         switch (item.getItemId()){
@@ -75,12 +74,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         new AboutFragment()).commit();
                 break;
 
-
-
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    //end fragment
+
+
+
 
     @Override
     public void onBackPressed() {

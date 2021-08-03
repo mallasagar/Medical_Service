@@ -18,9 +18,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:text="Medical Service"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-
-
-
-</LinearLayout>
+    </LinearLayout>
